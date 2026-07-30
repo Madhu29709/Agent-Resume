@@ -23,6 +23,11 @@ st.title("AI RESUME GENERATOR")
 
 st.write("""This app helps user to build customized professional Resume with latest Job Apply Link""")
 st.image("bg.png")
+
+st.sidebar.title("Fill important Details")
+st.sidebar.image("bg.png")
+
+
 # ====API kEYS========
 
 GOOGLE_API_KEY ="AQ.Ab8RN6IZ7tWDZnFe3AH6xnSM-rMV1NoO5eUasIm8SxZ_HnS0Dg"

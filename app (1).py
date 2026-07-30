@@ -3,7 +3,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_groq import ChatGroq
 import langchain
 from langchain.agents import create_agent
-import langchain_community
+
 from tavily import TavilyClient
 import pytesseract as pyt
 import streamlit as st
@@ -13,6 +13,16 @@ from PIL import Image
 import pandas as pd
 import numpy as np
 
+
+
+# to show the web-app:complete page layout
+st.set_page_config(layout-wide)
+
+# TO give title
+st.title("AI RESUME GENERATOR")
+
+st.write("""This app helps user to build customized professional Resume with latest Job Apply Link""")
+st.image("")
 # ====API kEYS========
 
 GOOGLE_API_KEY ="AQ.Ab8RN6IZ7tWDZnFe3AH6xnSM-rMV1NoO5eUasIm8SxZ_HnS0Dg"
@@ -96,9 +106,9 @@ def  main_agent(agent, query):
 
 
 # ======= agent======
-code = main_agent(agent,"MADHU, DATA SCIENTIST")
-from IPython import display  as DISPLAY
-DISPLAY.HTML(code)
+# code = main_agent(agent,"MADHU, DATA SCIENTIST")
+# from IPython import display  as DISPLAY
+# DISPLAY.HTML(code)
 
 
 
@@ -128,8 +138,8 @@ def get_jobs(agent,
 
 
 # =======
-code = get_jobs(agent)
-DISPLAY.HTML(code)
+# code = get_jobs(agent)
+# DISPLAY.HTML(code)
 
 
 

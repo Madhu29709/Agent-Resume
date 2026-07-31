@@ -71,7 +71,7 @@ user_info = st.text_area("Write your Resume Description:")
 
 # ======MODELS==========
 model = ChatGoogleGenerativeAI(
-    model = 'gemini-3.5-flash-lite',
+    model = 'gemini-2.5-flash-lite',
     google_api_key = GOOGLE_API_KEY
 
 )
@@ -86,7 +86,7 @@ def search_lastest_news_jobs(query):
   tavily"""
   client = TavilyClient(
       api_key = TAVILY_API_KEY)
-  responsev = client.search(query)
+  response = client.search(query)
   return response
 
 
@@ -124,7 +124,7 @@ def  main_agent(agent, query):
 
   # SAVE PROMPT using File Handling
 
-  with open('prompt.text','w') as f:
+  with open('prompt.txt','w') as f:
     f.write(detailed_prompt)
   user_details = f"""Below given is a user details
   generate resume based on that , if not
